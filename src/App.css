@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-secondary: #8b5cf6;
+  --color-accent: #ec4899;
+  --color-dark: #1e293b;
+  --color-light: #f8fafc;
+  --color-accent-500: #ec4899;
+  --font-sans: Inter, sans-serif;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent text-lg font-bold flex items-center justify-center mt-4  md:text-2xl;
+}
+.price {
+  @apply mt-4 mb-2 text-lg font-bold  text-dark  md:text-2xl flex items-center justify-center;
+}
+.cart-item{
+  @apply  p-4 rounded-lg bg-light shadow-md border-2 text-nowrap;
+}
+.li-item:hover {
+  @apply text-accent-500 bg-transparent transition-all;
+}
+.li-item {
+  @apply text-lg md:text-xl;
+}
+.gradient-text:hover {
+  @apply text-accent bg-transparent;
+}
+.cart-btn {
+  @apply mt-4 flex h-10 w-10 flex-col items-center justify-center rounded-full 
+             transition-colors duration-200 
+            bg-dark cursor-pointer text-white text-xl hover:bg-gray-500;
+}
+.cart-add-remove-btn{
+  @apply mt-5 flex gap-3 h-8 w-50  items-center justify-center rounded-full transition-colors duration-200 bg-dark cursor-pointer text-white text-xl hover:bg-gray-500;
+}
+
+.cart-btn-cart {
+  @apply  flex h-9 w-9 flex-row m-2 items-center justify-center rounded-lg 
+             transition-colors duration-200 
+            bg-dark cursor-pointer text-white text-xl hover:bg-gray-500 shrink-0; 
+}
+.cart-item-sm{
+  @apply p-2 rounded-lg bg-light shadow-md border-2 text-nowrap;
+}
+.gradient-text-cart {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent text-base font-bold flex items-center justify-center mt-4  md:text-lg text-wrap;
+}
+.price-cart {
+  @apply mt-4 mb-2 text-base font-bold  text-dark  md:text-lg flex items-center justify-center;
+}
+
+.order-success{
+  @apply  text-xl font-bold p-2;
+}
+
+.neon-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 2px solid darkgray;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.neon-card:hover {
+  border-color:white ;
+  box-shadow:
+    0 0 8px #00ffff,
+    0 0 16px blue;
+}
